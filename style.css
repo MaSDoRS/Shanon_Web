@@ -32,10 +32,11 @@ body {
     padding: 60px 0 40px;
 }
 
+/* PERUBAHAN 1: Gambar Profil */
 .profile-photo {
     width: 150px;
     height: 150px;
-    border-radius: 50%;
+    border-radius: 50%; /* Membuat gambar menjadi lingkaran */
     object-fit: cover;
     border: 5px solid white;
     margin-bottom: 15px;
@@ -106,8 +107,10 @@ body {
     flex: 1;
 }
 
+/* PERUBAHAN 2: Ukuran Area Media Proyek */
 .project-media {
-    flex: 1;
+    /* Mengurangi proporsi flex dari 1 menjadi 0.7 atau 0.6 agar gambar lebih kecil di desktop */
+    flex: 0.7; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -116,15 +119,14 @@ body {
     background-color: #f8f9fa;
 }
 
-/* PERUBAHAN UKURAN GAMBAR PROYEK DI SINI */
 .project-media img {
-    /* Mengurangi tinggi maksimum untuk gambar yang lebih kecil */
+    /* Tinggi maksimum gambar: 150px, lebar 90% dari area media */
     width: 90%; 
     max-height: 150px; 
     object-fit: contain;
     margin-bottom: 10px;
-    border-radius: 4px;
-    border: 1px solid #ddd; /* Tambahkan border tipis agar batas gambar lebih jelas */
+    border-radius: 4px; 
+    border: 1px solid #ddd; 
 }
 
 .project-card.reversed {
@@ -246,8 +248,10 @@ footer {
     }
 
     .project-media {
+        /* Mengembalikan flex:1 (lebar penuh) agar responsif pada mobile */
+        flex: 1; 
         padding: 10px;
-        order: -1; /* Pindahkan media ke atas pada tampilan mobile */
+        order: -1; 
     }
 
     .skills-grid {
