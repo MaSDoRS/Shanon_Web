@@ -116,12 +116,15 @@ body {
     background-color: #f8f9fa;
 }
 
+/* PERUBAHAN UKURAN GAMBAR PROYEK DI SINI */
 .project-media img {
-    width: 100%;
-    max-height: 200px;
+    /* Mengurangi tinggi maksimum untuk gambar yang lebih kecil */
+    width: 90%; 
+    max-height: 150px; 
     object-fit: contain;
     margin-bottom: 10px;
     border-radius: 4px;
+    border: 1px solid #ddd; /* Tambahkan border tipis agar batas gambar lebih jelas */
 }
 
 .project-card.reversed {
